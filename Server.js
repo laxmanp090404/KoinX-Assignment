@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 const morgan = require('morgan');
 const dbConnect = require('./Utilities/dbConnect');
+const priceFetcher = require('./Utilities/Pricefetcher');
 
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 const transactionRoutes = require('./routes/Transactions.routes');
-
 
 dbConnect();
 
@@ -29,3 +29,4 @@ try {
   });
 
   app.use(transactionRoutes)
+  priceFetcher();
