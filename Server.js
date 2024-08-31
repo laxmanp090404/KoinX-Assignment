@@ -9,6 +9,8 @@ const dbConnect = require('./Utilities/dbConnect');
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
+const transactionRoutes = require('./routes/Transactions.routes');
+
 
 dbConnect();
 
@@ -25,3 +27,5 @@ try {
   app.get('/', (req, res) => {
     res.status(200).send({ message: 'node server' });
   });
+
+  app.use(transactionRoutes)

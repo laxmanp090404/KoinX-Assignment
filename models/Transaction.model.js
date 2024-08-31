@@ -25,6 +25,9 @@ const transactionSchema = new mongoose.Schema({
       cumulativeGasUsed: String,
       gasUsed: String,
       confirmations: String,
+      methodId: String,
+      functionName: String,
+      
     }
   ],
 }, { timestamps: true });
