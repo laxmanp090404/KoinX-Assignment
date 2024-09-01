@@ -2,7 +2,7 @@
   "name": "koinx-assignment",
   "version": "1.0.0",
   "description": "This repository contains tasks assigned for Interview Process",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx nodemon server.js"
